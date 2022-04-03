@@ -54,3 +54,10 @@ function formatMoney(number) {
 }
 
 addUserBtn.addEventListener("click", getRandomUser);
+doubleBtn.addEventListener("click", () => {
+  data = data.map((user) => {
+    return { ...user, money: user.money * 2 };
+  });
+
+  updateDom();
+});
